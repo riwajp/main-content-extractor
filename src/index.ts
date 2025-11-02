@@ -8,11 +8,19 @@ import { createHttpClientWithRetries } from "./utils/httpClient";
 import { extractMainContent } from "./extractors/titleBasedExtractor";
 import fs from "node:fs";
 import { JSDOM } from "jsdom";
+import path from "node:path";
+import TurndownService from "turndown";
+
+const turndown = new TurndownService();
+
+function filenameFromUrl(url: string): string {
+  return url.replace(/^https?:\/\//, "").replace(/[^a-zA-Z0-9]/g, "_") + ".md";
+}
 
 const extract = async (url: string) => {
   const doc = await createHttpClientWithRetries(async (http) => {
     const response = await http.fetch(url);
-    if (!response.ok && response.status != 404)
+    if (!response.ok && response.status !== 404)
       throw new Error(`HTTP ${response.status}`);
     const html = await response.text();
     const { window } = new JSDOM(html);
@@ -22,6 +30,7 @@ const extract = async (url: string) => {
   const title = doc.querySelector("title")?.textContent || "";
   const homeUrl = getSiteHomePageUrl(url);
   const errorPageUrl = getSiteErrorPageUrl(url);
+
   const diffedDom = await domDiff(doc, [homeUrl, errorPageUrl]);
   const mainContainer = await extractMainContainer(diffedDom);
   const mainContent = extractMainContent(title, mainContainer!);
@@ -30,8 +39,6 @@ const extract = async (url: string) => {
 };
 
 const urls: string[] = [
-  "https://www.onlinekhabar.com/2025/10/1777327/uml-in-internal-discussions-to-go-to-court-seeking-restoration-of-parliament",
-  "https://www.onlinekhabar.com/2025/10/1782030/fundamental-treatment-for-those-who-act-like-i-am-the-state-home-minister-aryal",
   "https://www.bankofcanada.ca/2025/10/triennial-central-bank-survey-foreign-april-2025/",
   "https://www.bankofcanada.ca/2025/09/fad-press-release-2025-09-17/",
   "https://www.bankofcanada.ca/2025/06/the-impact-of-us-trade-policy-on-jobs-and-inflation-in-canada/",
@@ -46,11 +53,27 @@ const urls: string[] = [
   "https://www.rba.gov.au/speeches/2024/sp-ag-2024-09-18.html",
 ];
 
-const idx = 9;
-const url = urls[idx]!;
-const newDoc = await extract(url);
-fs.writeFileSync(
-  "main_output.html",
-  newDoc!.documentElement.outerHTML,
-  "utf-8"
-);
+async function runAll() {
+  const outputDir = "data/";
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  for (const url of urls) {
+    try {
+      console.log(`\nExtracting: ${url}`);
+      const newDoc = await extract(url);
+      const fileName = filenameFromUrl(url);
+      const filePath = path.join(outputDir, fileName);
+      const markdown = turndown.turndown(newDoc.documentElement.outerHTML);
+      fs.writeFileSync(filePath, markdown, "utf-8");
+      console.log(`Saved ${filePath}`);
+    } catch (err) {
+      console.error(`Error processing ${url}:`, err);
+    }
+  }
+
+  console.log("\nExtraction complete.");
+}
+
+runAll();

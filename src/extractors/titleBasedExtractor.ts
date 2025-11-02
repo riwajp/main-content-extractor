@@ -123,7 +123,6 @@ export async function extractMainContent(title: string, doc: Document) {
     const linkDiff = parentStats.linkRatio / prevStats.linkRatio;
 
     trail.push(parentStats);
-    console.log(textDiff, linkDiff);
 
     if (textDiff > 1.5 || linkDiff < 0.5) {
       current = parent;
