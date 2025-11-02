@@ -46,6 +46,8 @@ function cleanNonTextElements(root: Element): Element {
     "noscript",
     "script",
     "head",
+    "button",
+    "input",
   ];
 
   //  Remove all non-text elements
