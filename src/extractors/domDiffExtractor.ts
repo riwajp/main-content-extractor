@@ -185,13 +185,8 @@ export async function domDiff(doc: Document, referencePageUrls: string[]) {
 
     removeNodesBySignature(dom, signaturesToRemove);
   }
-  // save cleaned html
-  const fs = await import("fs");
-  fs.writeFileSync("output1.html", dom.documentElement.outerHTML, "utf-8");
 
-  console.log(`Processed urls, output saved to output1.html`);
+  console.log(`Processed urls`);
 
   return dom;
 }
-
-// -------------------- MAIN --------------------

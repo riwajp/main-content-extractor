@@ -82,16 +82,16 @@ function cleanNonTextElements(root: Element): Element {
 }
 
 function trimLinkHeavyEdges(container: Element): Element {
-  const LINK_THRESHOLD = 0.6;
+  const LINK_THRESHOLD = 0.8;
   const TEXT_DENSITY_THRESHOLD = 40;
 
-  const allNodes = container.children;
+  const allNodes = container.querySelectorAll("*");
 
   if (allNodes.length === 0) return container;
 
   for (const node of allNodes) {
     const { linkRatio, textDensity } = computeNodeStats(node);
-    if (linkRatio > LINK_THRESHOLD && node.querySelectorAll("*").length >= 4) {
+    if (linkRatio > LINK_THRESHOLD && node.querySelectorAll("*").length >= 2) {
       node.remove();
     }
   }
@@ -112,7 +112,6 @@ export async function extractMainContent(title: string, doc: Document) {
 
   let current = matchEl;
   let prevStats = computeNodeStats(current);
-  const trail: any[] = [prevStats];
 
   // find ancestor with sharp increment in text density & decrementin  link density
   while (current?.parentElement) {
@@ -122,9 +121,7 @@ export async function extractMainContent(title: string, doc: Document) {
     const textDiff = parentStats.textDensity / prevStats.textDensity;
     const linkDiff = parentStats.linkRatio / prevStats.linkRatio;
 
-    trail.push(parentStats);
-
-    if (textDiff > 1.5 || linkDiff < 0.5) {
+    if (textDiff > 2 && linkDiff < 0.5) {
       current = parent;
       prevStats = parentStats;
       break;
