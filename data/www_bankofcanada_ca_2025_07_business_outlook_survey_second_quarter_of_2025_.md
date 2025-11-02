@@ -96,3 +96,39 @@ Tariff-related cost increases are also putting upward pressure on firms’ expec
 Near-term inflation expectations have come back down to late-2024 levels after rising sharply last quarter ([Chart 12](#chart12)). Like last quarter, tariffs are the primary driver of inflation expectations. But firms report that direct upward price pressures from tariffs are being partially offset by indirect tariff impacts—namely, slower demand creating disinflationary pressures. Inflation expectations for longer horizons, meanwhile, have edged slightly higher but remain within the Bank’s target range.
 
 ### Chart 12: Businesses’ short-term inflation expectations have returned to late-2024 levels
+
+Box 1: Firms and consumers report that uncertainty is affecting their planning
+------------------------------------------------------------------------------
+
+Roughly half of participants in the Bank of Canada’s Business Outlook Survey reported difficulty forecasting conditions for their business in the near term. Firms talked about how forming an outlook is complicated in the current environment because of multiple layers of uncertainty. One of the clearest sources of uncertainty is that changing trade policies mean that businesses do not know if and when tariffs will be imposed and how long they will last. This particularly affects firms directly involved in international trade.
+
+Another source of uncertainty for firms is the uncertainty generated among consumers because of the trade conflict. In the Bank’s Canadian Survey of Consumer Expectations, a higher-than-usual share of consumers said the future is particularly hard to predict right now. Households are reacting to uncertainty by reducing spending, delaying major purchases, and increasing savings ([Chart 1-A](#chart1a), panel a). This, in turn, makes it more difficult for businesses to understand how demand conditions will evolve.
+
+Faced with high uncertainty, firms are reluctant to make costly and hard-to-reverse decisions that may not be appropriate if trade policy or economic conditions change.[1](#footnote-1 "For more details on how uncertainty impacts businesses’ decisions and the broader economy, see T. Macklem, “Tariffs and trade uncertainty are hurting the Canadian economy,” (speech delivered to Calgary Economic Development, Calgary, Alberta, March 20, 2025) and Bank of Canada, “How economic uncertainty disrupts investment,” The Economy, Plain and Simple (July 2025).")Many businesses are pausing or rethinking their plans and exhibiting more cautiousness:
+
+*   Roughly one-quarter of firms reported reducing their investment or employment plans ([Chart 1-A](#chart1a), panel b).
+
+*   This includes holding off on hiring; the share of firms planning to keep staffing levels roughly the same over the coming year is at survey highs.
+*   Similarly, many businesses talked about going ahead with investment plans that are already in progress but refraining from new capital expenditures designed to expand capacity or improve productivity. For example, many home builders said they are delaying new projects due to uncertainty around sales expectations and construction costs.
+
+*   Some firms are working to de-risk their balance sheets to allow them to better withstand financial shocks. This includes activities such as paying down debt, holding on to more cash and, for financial intermediaries, increasing allowances for loan losses.
+*   In Bank surveys and during Governing Council outreach events in Quebec, Newfoundland and Labrador, and Ontario this quarter, firms noted that their management teams have to devote significant attention to navigate trade uncertainty, including scenario planning and identifying alternative suppliers or customers. Businesses noted that this leads to less time and attention available to grow their business.
+
+Chart 1-A: Uncertainty is weighing on financial decisions, consumer spending and business investment
+
+### Chart 1-A: Uncertainty is weighing on financial decisions, consumer spending and business investment
+
+Endnotes
+--------
+
+Footnotes
+
+1.  1\. For more details on how uncertainty impacts businesses’ decisions and the broader economy, see T. Macklem, “[Tariffs and trade uncertainty are hurting the Canadian economy](https://www.bankofcanada.ca/2025/03/tariffs-and-trade-uncertainty-hurting-canadian-economy/),” (speech delivered to Calgary Economic Development, Calgary, Alberta, March 20, 2025) and Bank of Canada, “[How economic uncertainty disrupts investment](https://www.bankofcanada.ca/2025/07/how-economic-uncertainty-disrupts-investment/),”_The Economy, Plain and Simple_(July 2025).\[[←](#footnote-ref-1)\]
+
+Survey results report opinions expressed by the respondents and do not necessarily reflect the views of the Bank of Canada.
+
+The Bank of Canada’s Business Outlook Survey is conducted by the Bank’s regional office staff through interviews with the senior management of about 100 firms selected to reflect the composition of the gross domestic product of Canada’s business sector. Additional information on the survey and its content is available on the[Bank of Canada’s website](https://www.bankofcanada.ca/publications/bos/).
+
+The Bank of Canada’s Business Leaders’ Pulse is a survey of 700 to 1,000 Canadian business leaders who respond to one of three short online questionnaires each month. For more information on the Business Leaders’ Pulse, see T. Chernis, C. D’Souza, K. MacLean, T. Reader, J. Slive and F. Suvankulov, “[The Business Leaders’ Pulse—An Online Business Survey](https://www.bankofcanada.ca/2022/06/staff-discussion-paper-2022-14/),” Bank of Canada Staff Discussion Paper No. 2022-14 (June 2022).
+
+Content Type(s):[Publications](https://www.bankofcanada.ca/search/?content_type[]=publications),[Business Outlook Survey](https://www.bankofcanada.ca/search/?content_type[]=bos)

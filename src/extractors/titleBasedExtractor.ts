@@ -145,7 +145,7 @@ export async function extractMainContent(title: string, doc: Document) {
     const textDiff = parentStats.textDensity / prevStats.textDensity;
     const linkDiff = parentStats.linkRatio / prevStats.linkRatio;
 
-    if (textDiff < 0.8 || linkDiff > 1.2) {
+    if (textDiff < 0.8 && linkDiff > 1.2) {
       break;
     }
 
